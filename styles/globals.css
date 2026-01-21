@@ -1,0 +1,164 @@
+/* @import url(https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap); */
+@import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply m-0 overflow-x-hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header a {
+  @apply hover:text-opacity-75;
+}
+
+header.white a {
+  @apply text-white;
+}
+
+header .navlink a {
+  padding: calc(1.5vw);
+}
+header .secondary {
+  animation: 0.8s 3s ease-in 1 normal fadeIn forwards;
+}
+
+h1 {
+  @apply font-bold text-4xl;
+}
+
+h3 {
+  @apply font-bold text-xl;
+}
+h4 {
+  @apply font-semibold text-lg;
+}
+.slider .arrow {
+  @apply w-10 h-10 duration-300 opacity-80 hover:opacity-100;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.slider:hover .arrows {
+  @apply md:opacity-100;
+}
+.slider .arrows {
+  @apply opacity-0 duration-300;
+}
+.slider .imgs {
+  @apply opacity-0;
+  animation: 0.8s 0.2s ease-in 1 normal fadeIn forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero h1 {
+  @apply font-medium transform -translate-y-1/4 opacity-0;
+  margin-bottom: calc(0.5rem + 0.5vw);
+  font-size: calc(1rem + 2.5vw);
+  animation: 0.5s 1s ease-in 1 normal slideDown forwards;
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-25%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.hero h2 {
+  @apply transform -translate-x-10 opacity-0 whitespace-nowrap;
+  margin-bottom: calc(0.5rem + 1.8vw);
+  font-size: calc(0.5rem + 1.3vw);
+  animation: 0.5s 1.5s ease-in 1 normal slideRight forwards;
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-2.5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hero a {
+  @apply transform translate-y-10 opacity-0;
+  padding: calc(0.7rem + 0.7vw) calc(1.8rem + 0.7vw);
+  animation: 0.5s 2s ease-in 1 normal slideUp forwards;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(2.5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.stats .number {
+  font-size: 550%;
+}
+
+.story > a {
+  padding: calc(0.5rem + 0.3vw) calc(1.5rem + 0.45vw);
+}
+
+.btn {
+  @apply inline-block border-2 px-6 py-2 border-white rounded-full font-bold uppercase text-sm;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-md;
+}
+
+.react-pdf__Page__annotations.annotationLayer {
+  display: none;
+}
+
+/* PDF scaling for mobile */
+.react-pdf__Document {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.react-pdf__Page {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
